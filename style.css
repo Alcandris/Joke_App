@@ -1,0 +1,73 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  background: #d6e1f0;
+  color: rgb(241, 241, 241);
+}
+.app {
+  width: 70%;
+  min-width: 250px;
+  max-width: 800px;
+  background: rgb(145, 115, 246);
+  border-radius: 14px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 20px;
+}
+
+#reload:hover {
+  transform: scale(1.01);
+}
+#reload {
+  background: rgb(145, 115, 246);
+  border-radius: 14px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+  cursor: pointer;
+}
+
+#categorie {
+  text-align: left;
+}
+
+#filter {
+  position: absolute;
+  top: 0%;
+  left: -190px;
+  transition: all 1s;
+  background: rgb(145, 115, 246);
+  border-radius: 14px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+  cursor: pointer;
+}
+#paramImg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#paramImg i {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+.filterlistOff {
+  transform: translateX(-200%);
+  transition: all 1s;
+}
+.hiddenFilter {
+  transform: translateX(190px);
+  transition: all 1s;
+  padding: 20px 40px;
+}
+.listAppear {
+  transition: all 1s;
+  transform: translateX(0%);
+}

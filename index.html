@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Generateur de blagues</title>
+  </head>
+  <body>
+    <div id="filter" class="">
+      <div id="filterlist" class="filterlistOff">
+        <div class="adult">
+          <p>Inclure les blagues pour adultes?</p>
+          <input type="radio" name="adultselection" id="Non" checked />
+          <label for="Non">Non</label>
+          <input type="radio" name="adultselection" id="Oui" />
+          <label for="Oui">Oui</label>
+          <input type="radio" name="adultselection" id="Only" />
+          <label for="Only">Seulement </label>
+        </div>
+      </div>
+      <div id="paramImg"><i class="fa-solid fa-gear"></i></div>
+    </div>
+    <div class="app">
+      <p id="categorie"></p>
+      <h3 id="header"></h3>
+      <p id="content"></p>
+      <p id="contenthidden"></p>
+      <!-- <img src="" alt="" id="imgMedia" class="imgMedia" /> -->
+    </div>
+    <div id="reload">Une autre !!</div>
+    <script src="./index.js"></script>
+  </body>
+</html>
