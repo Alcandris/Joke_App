@@ -11,6 +11,11 @@ body {
   background: #d6e1f0;
   color: rgb(241, 241, 241);
 }
+
+a {
+  text-decoration: none;
+  color: rgb(241, 241, 241);
+}
 .app {
   width: 70%;
   min-width: 250px;
@@ -49,6 +54,11 @@ body {
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
   cursor: pointer;
 }
+
+#filter div {
+  text-align: left;
+  margin-top: 10px;
+}
 #paramImg {
   position: absolute;
   top: 10px;
@@ -70,4 +80,27 @@ body {
 .listAppear {
   transition: all 1s;
   transform: translateX(0%);
+}
+
+.hiddenanswer {
+  display: none;
+}
+.showanswer {
+  display: block;
+}
+
+#btnAnswer {
+  padding: 15px;
+  background-color: transparent;
+  border: none;
+  color: rgb(241, 241, 241);
+  cursor: pointer;
+}
+
+.btnHidden {
+  display: none;
+}
+.btnShow {
+  margin: 0 auto;
+  display: block;
 }

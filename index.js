@@ -9,6 +9,8 @@ const filterList = document.getElementById("filterlist");
 let lienAPI = "";
 
 function getJoke() {
+  btnAnswer.classList.remove("btnShow");
+  contentHidden.classList.remove("showanswer");
   if (Oui.checked) {
     lienAPI = "https://api.blablagues.net/?adu=1";
   } else if (Only.checked) {
@@ -25,14 +27,23 @@ function getJoke() {
       if (joke.rubrique == "Blagues") {
         categorie.textContent = joke.categorie;
         header.textContent = joke.content.text_head;
-        content.textContent =
-          joke.content.text !== ""
-            ? joke.content.text
-            : joke.content.text_hidden;
-        if (joke.content.text !== "" && joke.content.text_hidden !== "") {
-          content.textContent = joke.content.text;
-          contentHidden.textContent = joke.content.text_hidden;
+        content.textContent = joke.content.text;
+        contentHidden.textContent = joke.content.text_hidden;
+        if (joke.content.text_hidden !== "") {
+          btnAnswer.classList.add("btnShow");
+          btnAnswer.addEventListener("click", () => {
+            btnAnswer.classList.remove("btnShow");
+            contentHidden.classList.add("showanswer");
+          });
         }
+        // content.textContent =
+        //   joke.content.text !== ""
+        //     ? joke.content.text
+        //     : joke.content.text_hidden;
+        // if (joke.content.text !== "" && joke.content.text_hidden !== "") {
+        //   content.textContent = joke.content.text;
+        //   contentHidden.textContent = joke.content.text_hidden;
+        // }
       } else {
         getJoke();
       }
