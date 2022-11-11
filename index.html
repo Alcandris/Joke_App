@@ -12,31 +12,70 @@
     <title>Generateur de blagues</title>
   </head>
   <body>
-    <div id="filter" class="">
-      <div id="filterlist" class="filterlistOff">
-        <div class="adult">
+    <nav id="filter" class="">
+      <div class="toggle-btn" id="btnPara">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="filterlist">
+        <li>
+          <p>Rubrique</p>
+          <div>
+            <input type="radio" name="typeOfJoke" id="Blague" checked />
+            <label for="Blague">Blague</label>
+          </div>
+          <div>
+            <input type="radio" name="typeOfJoke" id="Imagejoke" />
+            <label for="Imagejoke">Image</label>
+          </div>
+          <div>
+            <!-- <input type="radio" name="typeOfJoke" id="Video" />
+            <label for="Video">Video </label>
+          </div>
+          <div>
+            <input type="radio" name="typeOfJoke" id="Perle" />
+            <label for="Perle">Perles du net </label>
+          </div> -->
+        </li>
+        <li class="adult">
           <p>Inclure les blagues pour adultes?</p>
-          <input type="radio" name="adultselection" id="Non" checked />
-          <label for="Non">Non</label>
-          <input type="radio" name="adultselection" id="Oui" />
-          <label for="Oui">Oui</label>
-          <input type="radio" name="adultselection" id="Only" />
-          <label for="Only">Seulement </label>
-        </div>
-        <div class="contact">
+          <div>
+            <input type="radio" name="adultselection" id="Non" checked />
+            <label for="Non">Non</label>
+          </div>
+          <div>
+            <input type="radio" name="adultselection" id="Oui" />
+            <label for="Oui">Oui</label>
+          </div>
+          <div>
+            <input type="radio" name="adultselection" id="Only" />
+            <label for="Only">Seulement </label>
+          </div>
+        </li>
+        <li class="contact">
           <a href="mailto:cauchoisa@gmail.com?subject=Joke App Contact"
             >Contact/Rapport</a
           >
-        </div>
-      </div>
-      <div id="paramImg"><i class="fa-solid fa-gear"></i></div>
-    </div>
+        </li>
+      </ul>
+    </nav>
     <div class="app">
-      <p id="categorie"></p>
-      <h3 id="header"></h3>
-      <p id="content"></p>
-      <p id="contenthidden" class="hiddenanswer"></p>
-      <button id="btnAnswer" class="btnHidden btnShow">Voir la réponse</button>
+      <div id="appBlague">
+        <p id="Blaguecategorie" class="categorie"></p>
+        <h3 id="Blagueheader"></h3>
+        <p id="Blaguecontent"></p>
+        <p id="Blaguecontenthidden" class="hiddenanswer"></p>
+        <button id="btnAnswer" class="btnHidden btnShow">
+          Voir la réponse
+        </button>
+      </div>
+      <div id="appImages">
+        <p id="Imagescategorie" class="categorie"></p>
+        <h3 id="Imagesheader"></h3>
+        <p id="Imagescontent"></p>
+        <img src="" alt="" />
+      </div>
     </div>
     <div id="reload">Une autre !!</div>
     <script src="./index.js"></script>

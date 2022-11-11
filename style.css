@@ -1,3 +1,9 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   min-height: 100vh;
   margin: 0;
@@ -11,24 +17,92 @@ body {
   background: #d6e1f0;
   color: rgb(241, 241, 241);
 }
-
 a {
   text-decoration: none;
   color: rgb(241, 241, 241);
 }
+/* Navigation */
+
+#filter {
+  position: absolute;
+  top: 0%;
+  left: -250px;
+  transition: all 1s;
+  background: rgb(145, 115, 246);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+  padding: 5px;
+  cursor: pointer;
+  width: 250px;
+  height: 100%;
+  transition: 0.5s ease-out;
+  z-index: 4;
+}
+
+li {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  left: 260px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.toggle-btn span {
+  width: 50px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgb(145, 115, 246);
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+
+.cross-btn :first-child {
+  transform: translateY(10px) rotate(135deg);
+}
+.cross-btn :nth-child(2) {
+  visibility: hidden;
+  transition: 0s ease;
+}
+.cross-btn :last-child {
+  transform: translateY(-14px) rotate(-135deg);
+}
+.showFilter {
+  transform: translateX(250px);
+}
+
+/* Affichage */
 .app {
   width: 70%;
   min-width: 250px;
   max-width: 800px;
   background: rgb(145, 115, 246);
   border-radius: 14px;
-  padding: 20px 40px;
+  padding: 20px;
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
   cursor: pointer;
   transition: 0.2s;
   margin: 20px;
 }
 
+.categorie {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.notShow {
+  display: none;
+}
+
+#appImages {
+  width: 100%;
+}
+/* BTN */
+/* BTN Reload */
 #reload:hover {
   transform: scale(1.01);
 }
@@ -40,48 +114,7 @@ a {
   cursor: pointer;
 }
 
-#categorie {
-  text-align: left;
-}
-
-#filter {
-  position: absolute;
-  top: 0%;
-  left: -190px;
-  transition: all 1s;
-  background: rgb(145, 115, 246);
-  border-radius: 14px;
-  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
-  cursor: pointer;
-}
-
-#filter div {
-  text-align: left;
-  margin-top: 10px;
-}
-#paramImg {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-#paramImg i {
-  font-size: 1.5rem;
-  pointer-events: none;
-}
-.filterlistOff {
-  transform: translateX(-200%);
-  transition: all 1s;
-}
-.hiddenFilter {
-  transform: translateX(190px);
-  transition: all 1s;
-  padding: 20px 40px;
-}
-.listAppear {
-  transition: all 1s;
-  transform: translateX(0%);
-}
-
+/* Btn de réponse */
 .hiddenanswer {
   display: none;
 }
@@ -96,11 +129,16 @@ a {
   color: rgb(241, 241, 241);
   cursor: pointer;
 }
-
 .btnHidden {
   display: none;
 }
 .btnShow {
   margin: 0 auto;
   display: block;
+}
+
+/* IMAGES */
+
+img {
+  width: 100%;
 }
